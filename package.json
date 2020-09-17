@@ -11,7 +11,9 @@
     "test:cover": "jest --coverage",
     "babel": "rimraf dist && babel src -d dist -D --ignore=**/*.test.js",
     "dev": "npm run babel -- -w",
-    "start": "npm run babel && nodemon dist/server/"
+    "start": "npm run babel && nodemon dist/server/",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "imcuttle",
@@ -32,21 +34,22 @@
     "highlight.js": "^9.12.0",
     "history": "^3.3.0",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.5",
-    "markdown-it": "^8.4.0",
+    "lodash": "^4.17.20",
+    "markdown-it": "^10.0.0",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-github-headings": "^1.1.1",
     "markdown-it-github-preamble": "^1.0.0",
     "markdown-it-replace-link": "^1.0.1",
     "markdown-it-task-lists": "^2.1.0",
     "md5": "^2.2.1",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^0.5.2",
     "parse-github-url": "1.0.2",
     "pify": "^3.0.0",
-    "puppeteer": "^1.1.1",
+    "puppeteer": "^1.13.0",
     "qs": "^6.5.1",
     "streamifier": "^0.1.1",
-    "url-join": "^4.0.0"
+    "url-join": "^4.0.0",
+    "snyk": "^1.398.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -60,5 +63,6 @@
     "react-dom": "^16.2.0",
     "react-mobx-vm": "0.0.10",
     "rimraf": "^2.6.2"
-  }
+  },
+  "snyk": true
 }
